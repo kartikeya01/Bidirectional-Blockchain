@@ -158,17 +158,18 @@ class Blockchain:
 with open("transactions.txt", "r") as file:
     transactions = file.read().splitlines()
 
-# reverse_blockchain = Blockchain()
-# transactions_per_block = 10
-# for i in range(0, len(transactions), transactions_per_block):
-#     block_transactions = transactions[i:i+transactions_per_block]
-#     reverse_blockchain.add_block(block_transactions)
+reverse_blockchain = Blockchain()
+transactions_per_block = 50
+for i in range(0, len(transactions), transactions_per_block):
+    block_transactions = transactions[i:i+transactions_per_block]
+    reverse_blockchain.add_block(block_transactions)
 
-# reverse_blockchain.traverse_forward()
-# reverse_blockchain.traverse_backward()
+reverse_blockchain.traverse_forward()
+reverse_blockchain.traverse_backward()
+
 
 reverse_blockchain = Blockchain()
-transactions_per_block = 10000
+transactions_per_block = 50
 mining_times = []  # List to store mining times
 
 for i in range(0, len(transactions), transactions_per_block):
@@ -178,15 +179,15 @@ for i in range(0, len(transactions), transactions_per_block):
     end_time = time.time()
     mining_times.append(end_time - start_time)
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-plt.figure(figsize=(8, 6))
-plt.plot(mining_times, marker='o', linestyle='-', color='b')
-plt.xlabel('Block Number')
-plt.ylabel('Mining Time (seconds)')
-plt.title('Block Time for Mining of Each Block for ' + str(transactions_per_block) + ' transactions per block')
-plt.grid(True)
-plt.show()
+# plt.figure(figsize=(8, 6))
+# plt.plot(mining_times, marker='o', linestyle='-', color='b')
+# plt.xlabel('Block Number')
+# plt.ylabel('Mining Time (seconds)')
+# plt.title('Block Time for Mining of Each Block for ' + str(transactions_per_block) + ' transactions per block')
+# plt.grid(True)
+# plt.show()
 
 average_mining_time = sum(mining_times) / len(mining_times)
 print("Number of Transactions per block: " + str(transactions_per_block))

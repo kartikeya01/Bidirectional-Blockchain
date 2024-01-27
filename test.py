@@ -156,3 +156,5 @@ for i in range(0, len(transactions), transactions_per_block):
 
 reverse_blockchain.traverse_forward()
 # reverse_blockchain.traverse_backward()
+
+
