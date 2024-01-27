@@ -1,36 +1,3 @@
-# import os
-
-# def search_order_id_in_files(folder_path, order_id):
-#     last_occurrence = None
-
-#     for filename in os.listdir(folder_path):
-#         if filename.endswith(".txt"):
-#             file_path = os.path.join(folder_path, filename)
-
-#             with open(file_path, 'r') as file:
-#                 lines = file.readlines()
-
-#                 for line_number, line in enumerate(reversed(lines), 1):
-#                     if f"orderId {order_id}" in line:
-#                         last_occurrence = (file_path, len(lines) - line_number, line.strip())
-#                         break
-
-#     return last_occurrence
-
-
-# folder_path = 'blockchain3' 
-# order_id_to_search = 635  
-
-# result = search_order_id_in_files(folder_path, order_id_to_search)
-
-# if result:
-#     file_path, position, line = result
-#     print(f"Last occurrence of orderId {order_id_to_search} found in file: {file_path}, at position: {position}")
-#     print(f"Line content: {line}")
-# else:
-#     print(f"orderId {order_id_to_search} not found in any files.")
-
-
 import os
 import time
 
@@ -116,7 +83,7 @@ def search_order_id_from_both_ends(folder_path, order_id):
             return first_pointer
 
 # Example usage:
-folder_path = 'blockchain3' # Replace with the actual path to your folder
+folder_path = 'blockchain3' 
 order_id_to_search = 635  # Replace with the orderId you want to search
 
 # Unidirectional Search
