@@ -1,6 +1,9 @@
 import os
 import time
+import re
 
+
+# this function calculates the time taken to search
 def search_order_id_in_files(folder_path, order_id, bidirectional=False):
     start_time = time.time()
 
@@ -14,21 +17,23 @@ def search_order_id_in_files(folder_path, order_id, bidirectional=False):
 
     return result, elapsed_time
 
+
+# this function searches the orderId in only one direction
 def search_order_id_unidirectional(folder_path, order_id):
     last_occurrence = None
 
-    # Iterate over all files in the specified folder
+    # Iterating over files
     for filename in os.listdir(folder_path):
         if filename.endswith(".txt"):
             file_path = os.path.join(folder_path, filename)
 
-            # Read the content of the file
+            # Reading the content
             with open(file_path, 'r') as file:
                 lines = file.readlines()
 
-                # Iterate over the lines in reverse order to find the last occurrence
+                # Iterating over the lines in reverse order to find the last occurrence
                 for line_number, line in enumerate(reversed(lines), 1):
-                    if f"orderId {order_id}" in line:
+                    if re.search(r'\borderId\s{0}\b'.format(order_id), line):
                         last_occurrence = (file_path, len(lines) - line_number, line.strip())
                         break
 
@@ -41,7 +46,7 @@ def search_order_id_from_both_ends(folder_path, order_id):
     file_list = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
     total_files = len(file_list)
 
-    # Initialize pointers
+    
     first_file_index = 0
     last_file_index = total_files - 1
 
@@ -55,7 +60,7 @@ def search_order_id_from_both_ends(folder_path, order_id):
 
                 # Iterate over the lines to find the orderId
                 for line_number, line in enumerate(lines, 1):
-                    if f"orderId {order_id}" in line:
+                    if re.search(r'\borderId\s{0}\b'.format(order_id), line):
                         first_pointer = (file_path, line_number, line.strip())
                         break
 
@@ -71,6 +76,7 @@ def search_order_id_from_both_ends(folder_path, order_id):
                 # Iterate over the lines in reverse order to find the orderId
                 for line_number, line in enumerate(reversed(lines), 1):
                     if f"orderId {order_id}" in line:
+
                         last_pointer = (file_path, len(lines) - line_number, line.strip())
                         break
 
@@ -82,9 +88,9 @@ def search_order_id_from_both_ends(folder_path, order_id):
         elif first_file_index > last_file_index:
             return first_pointer
 
-# Example usage:
+
 folder_path = 'blockchain3' 
-order_id_to_search = 635  # Replace with the orderId you want to search
+order_id_to_search = 100 
 
 # Unidirectional Search
 result_unidirectional, time_unidirectional = search_order_id_in_files(folder_path, order_id_to_search, bidirectional=False)
