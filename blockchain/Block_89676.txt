@@ -1,0 +1,18 @@
+Block Hash: db382a6b4ca63f524aece6266958c8cee58372e58aa5fc9cd75fdd5f40e451f6
+Previous Hash: 17e102d7e1f82be003adbc8752b6ad5f6e36848d92a825b11cd823c73b986e7b
+Merkle Root: fd8bd3bf7c40b617f649085d68c9474c0b0205355280941a073eee5643d27fdf
+Random Number: 498564570
+Forward Hash: 0
+Timestamp: 2023-11-17 11:13:04
+Transactions:
+- Bob sends $36 to Charlie
+- Alice sends $42 to David
+- Charlie sends $43 to Emily
+- Charlie sends $28 to Alice
+- David sends $37 to Charlie
+- Charlie sends $23 to Bob
+- Charlie sends $19 to Emily
+- Bob sends $38 to David
+- Emily sends $17 to Alice
+- Alice sends $43 to Emily
+==================================================
