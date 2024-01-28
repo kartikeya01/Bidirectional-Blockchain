@@ -12,6 +12,8 @@ def search_with_two_pointers(folder_path, order_id):
     # Iterate over files in the order they are stored in the folder
     files.sort(key=lambda x: int(x.split('_')[1].split('.')[0]))
     
+    print(files)
+    print("\n")
     start_time = time.time()
     # Use two pointers to traverse the list of files
     forward_pointer = 0
