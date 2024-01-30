@@ -12,7 +12,6 @@ def search_with_two_pointers(folder_path, order_id):
     # Iterate over files in the order they are stored in the folder
     files.sort(key=lambda x: int(x.split('_')[1].split('.')[0]))
     
-    print(files)
     print("\n")
     start_time = time.time()
     # Use two pointers to traverse the list of files
@@ -44,15 +43,18 @@ def search_with_two_pointers(folder_path, order_id):
         forward_pointer += 1
         backward_pointer -= 1
 
+    t = time.time() - start_time
     result = forward_result + backward_result
-    return result , start_time
+    
+    return result , t
 
 # Example usage:
 folder_path = 'blockchain3'
-order_id_to_search = 100  # Replace with the orderId you want to search
+order_id_to_search = 55
 
-result , start_time  = search_with_two_pointers(folder_path, order_id_to_search)
-t_elapsed = time.time() - start_time
+
+result , t_elapsed   = search_with_two_pointers(folder_path, order_id_to_search)
+
 if result:
     print(f"Occurrences of orderId {order_id_to_search} found in the following files:")
     print(result)
