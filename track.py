@@ -1,5 +1,6 @@
 import os
 import time
+import matplotlib.pyplot as plt
 
 def search_order_id_in_files(folder_path, order_id):
     occurrences = []
@@ -26,9 +27,40 @@ def search_order_id_in_files(folder_path, order_id):
 
     return occurrences , start_time
 
+
+def plot():
+    transactions_per_block = [10,50,100]  # Number of transactions per block
+    
+    time_in_seconds_uni = [0.069570,0.009841,0.007983]
+    time_in_seconds_bi = [0.034785,0.005446,0.003992]
+
+    # Creating the bar chart
+    barUni = plt.bar(range(len(transactions_per_block)), time_in_seconds_uni, color='skyblue')
+    barBi = plt.bar(range(len(transactions_per_block)), time_in_seconds_bi, color='red')
+
+    # Adding time labels on bars
+    for i, bar in enumerate(barUni):
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height(), f"{time_in_seconds_uni[i]:.5f}", ha='center', va='bottom')
+
+    for i, bar in enumerate(barBi):
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height(), f"{time_in_seconds_bi[i]:.5f}", ha='center', va='bottom')
+
+    # Adding labels and title
+    plt.xlabel('Number of Transactions per Block')
+    plt.ylabel('Time in Seconds')
+    plt.title('Comparison of Average Time based on Transactions per Block while tracking')
+
+    # Setting x-axis labels
+    plt.xticks(range(len(transactions_per_block)), transactions_per_block)
+
+    # Display the plot without gaps between bars
+    plt.tight_layout()
+    plt.show()
+
 # Example usage:
 folder_path = 'blockchain3'
-order_id_to_search = 100  # Replace with the exact orderId you want to search
+order_id_to_search = 55
+
 
 result ,start_time= search_order_id_in_files(folder_path, order_id_to_search)
 t_elapsed = time.time() - start_time
@@ -38,5 +70,6 @@ if result:
     for occurrence in result:
         print(f"{occurrence['file']} - Line {occurrence['line_number']}: {occurrence['line']}")
     print(f"Time taken : {t_elapsed:.6f}")
+    plot()
 else:
     print(f"No occurrences found for orderId {order_id_to_search}.")
