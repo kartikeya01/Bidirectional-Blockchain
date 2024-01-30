@@ -159,7 +159,7 @@ with open("transactions.txt", "r") as file:
     transactions = file.read().splitlines()
 
 reverse_blockchain = Blockchain()
-transactions_per_block = 50
+transactions_per_block = 100
 for i in range(0, len(transactions), transactions_per_block):
     block_transactions = transactions[i:i+transactions_per_block]
     reverse_blockchain.add_block(block_transactions)
@@ -169,7 +169,7 @@ reverse_blockchain.traverse_backward()
 
 
 reverse_blockchain = Blockchain()
-transactions_per_block = 50
+transactions_per_block = 100
 mining_times = []  # List to store mining times
 
 for i in range(0, len(transactions), transactions_per_block):

@@ -1,60 +1,110 @@
 ==================================================
 Block 24:
-Block Hash: 1f9231e71221d7530f1d61a703393c82074a78725a5f41a9785dbe9822f466ff
-Previous Hash: 30ce3c3867c5e300db9bdcf7489f05388fe566d636e8a9a92e2522c41fb7642d
-Merkle Root: dca6791d658308edeead9387e04e4655d18fb8ab9aa04ebc9fecdac4a96e17bb
-Random Number: 421421072
-Timestamp: 2024-01-28 15:50:50
-Forward Hash: c70d18a1cf5e81f5200da61213010b6e1522a9acd20513a79df26c65cbef10be
+Block Hash: 61177f89fcaf396f07848ffd0ae9443b64b3d5b2abe54e1ef005aab88921920b
+Previous Hash: f2afc30c3ec5ef1d16af63bb4add50b99d4a462ae2293aaef495f8507c8ce8df
+Merkle Root: 227d86b7ad6f125b528cf3c4df5a61a3b063bcd60912d8b02ebe644b94a97c90
+Random Number: 258062392
+Timestamp: 2024-01-30 15:33:54
+Forward Hash: 16d992776ffa3503d849b9e2996934bad6c10c6226adb380f31e3eb73c663a35
 Transactions:
-- package of orderId 990 is transported from Delhi to Jabalpur
-- package of orderId 225 is transported from Indore to Bangalore
-- package of orderId 716 is transported from Lucknow to Jabalpur
-- package of orderId 925 is transported from Indore to Mumbai
-- package of orderId 478 is transported from Chennai to Mumbai
-- package of orderId 928 is transported from Indore to Bangalore
-- package of orderId 24 is transported from Mangalore to Kolkata
-- package of orderId 149 is transported from Lucknow to Chennai
-- package of orderId 130 is transported from Jabalpur to Chennai
-- package of orderId 319 is transported from Bangalore to Delhi
-- package of orderId 589 is transported from Jabalpur to Lucknow
-- package of orderId 346 is transported from Kolkata to Bangalore
-- package of orderId 141 is transported from Delhi to Chennai
-- package of orderId 57 is transported from Chennai to Jabalpur
-- package of orderId 271 is transported from Chennai to Bangalore
-- package of orderId 408 is transported from Delhi to Lucknow
-- package of orderId 300 is transported from Mumbai to Indore
-- package of orderId 224 is transported from Lucknow to Mumbai
-- package of orderId 327 is transported from Kolkata to Lucknow
-- package of orderId 119 is transported from Bangalore to Lucknow
-- package of orderId 164 is transported from Mangalore to Jabalpur
-- package of orderId 228 is transported from Mangalore to Lucknow
-- package of orderId 663 is transported from Mangalore to Mumbai
-- package of orderId 736 is transported from Bangalore to Chennai
-- package of orderId 127 is transported from Chennai to Kolkata
-- package of orderId 739 is transported from Kolkata to Mumbai
-- package of orderId 566 is transported from Chennai to Bangalore
-- package of orderId 306 is transported from Kolkata to Chennai
-- package of orderId 751 is transported from Mumbai to Bangalore
-- package of orderId 628 is transported from Indore to Mumbai
-- package of orderId 999 is transported from Mumbai to Lucknow
-- package of orderId 810 is transported from Mumbai to Lucknow
-- package of orderId 478 is transported from Lucknow to Kolkata
-- package of orderId 562 is transported from Mumbai to Kolkata
-- package of orderId 856 is transported from Mumbai to Mangalore
-- package of orderId 468 is transported from Indore to Kolkata
-- package of orderId 703 is transported from Delhi to Chennai
-- package of orderId 107 is transported from Kolkata to Chennai
-- package of orderId 434 is transported from Indore to Mumbai
-- package of orderId 441 is transported from Delhi to Bangalore
-- package of orderId 840 is transported from Chennai to Delhi
-- package of orderId 464 is transported from Mangalore to Delhi
-- package of orderId 780 is transported from Chennai to Kolkata
-- package of orderId 571 is transported from Bangalore to Jabalpur
-- package of orderId 199 is transported from Mumbai to Mangalore
-- package of orderId 70 is transported from Mumbai to Jabalpur
-- package of orderId 440 is transported from Delhi to Lucknow
-- package of orderId 434 is transported from Jabalpur to Mumbai
-- package of orderId 529 is transported from Indore to Bangalore
-- package of orderId 101 is transported from Indore to Bangalore
+- package of orderId 792 is transported from Jabalpur to Delhi
+- package of orderId 413 is transported from Delhi to Bangalore
+- package of orderId 35 is transported from Indore to Bangalore
+- package of orderId 777 is transported from Chennai to Jabalpur
+- package of orderId 703 is transported from Bangalore to Lucknow
+- package of orderId 642 is transported from Lucknow to Kolkata
+- package of orderId 333 is transported from Indore to Kolkata
+- package of orderId 583 is transported from Jabalpur to Chennai
+- package of orderId 816 is transported from Chennai to Bangalore
+- package of orderId 1 is transported from Delhi to Kolkata
+- package of orderId 283 is transported from Mangalore to Indore
+- package of orderId 914 is transported from Lucknow to Kolkata
+- package of orderId 78 is transported from Lucknow to Mangalore
+- package of orderId 821 is transported from Mumbai to Jabalpur
+- package of orderId 404 is transported from Jabalpur to Delhi
+- package of orderId 443 is transported from Bangalore to Mangalore
+- package of orderId 807 is transported from Chennai to Jabalpur
+- package of orderId 239 is transported from Delhi to Jabalpur
+- package of orderId 28 is transported from Delhi to Lucknow
+- package of orderId 641 is transported from Jabalpur to Mumbai
+- package of orderId 798 is transported from Indore to Mumbai
+- package of orderId 950 is transported from Indore to Delhi
+- package of orderId 863 is transported from Jabalpur to Kolkata
+- package of orderId 570 is transported from Mumbai to Jabalpur
+- package of orderId 289 is transported from Mangalore to Chennai
+- package of orderId 39 is transported from Mangalore to Lucknow
+- package of orderId 656 is transported from Delhi to Bangalore
+- package of orderId 33 is transported from Mangalore to Jabalpur
+- package of orderId 368 is transported from Lucknow to Mangalore
+- package of orderId 275 is transported from Indore to Jabalpur
+- package of orderId 563 is transported from Mumbai to Delhi
+- package of orderId 861 is transported from Delhi to Mangalore
+- package of orderId 519 is transported from Kolkata to Chennai
+- package of orderId 745 is transported from Delhi to Chennai
+- package of orderId 888 is transported from Jabalpur to Mangalore
+- package of orderId 675 is transported from Delhi to Bangalore
+- package of orderId 204 is transported from Delhi to Mumbai
+- package of orderId 164 is transported from Mumbai to Mangalore
+- package of orderId 859 is transported from Mumbai to Jabalpur
+- package of orderId 601 is transported from Indore to Bangalore
+- package of orderId 20 is transported from Kolkata to Delhi
+- package of orderId 372 is transported from Lucknow to Kolkata
+- package of orderId 682 is transported from Chennai to Kolkata
+- package of orderId 171 is transported from Delhi to Indore
+- package of orderId 194 is transported from Bangalore to Kolkata
+- package of orderId 179 is transported from Lucknow to Delhi
+- package of orderId 751 is transported from Lucknow to Indore
+- package of orderId 50 is transported from Mumbai to Delhi
+- package of orderId 117 is transported from Delhi to Kolkata
+- package of orderId 625 is transported from Mangalore to Chennai
+- package of orderId 278 is transported from Mumbai to Chennai
+- package of orderId 151 is transported from Bangalore to Delhi
+- package of orderId 766 is transported from Kolkata to Bangalore
+- package of orderId 744 is transported from Bangalore to Kolkata
+- package of orderId 73 is transported from Bangalore to Kolkata
+- package of orderId 241 is transported from Chennai to Bangalore
+- package of orderId 559 is transported from Jabalpur to Indore
+- package of orderId 459 is transported from Kolkata to Mangalore
+- package of orderId 761 is transported from Lucknow to Delhi
+- package of orderId 631 is transported from Jabalpur to Indore
+- package of orderId 717 is transported from Mumbai to Mangalore
+- package of orderId 46 is transported from Jabalpur to Kolkata
+- package of orderId 669 is transported from Chennai to Indore
+- package of orderId 319 is transported from Mumbai to Mangalore
+- package of orderId 306 is transported from Bangalore to Kolkata
+- package of orderId 862 is transported from Chennai to Lucknow
+- package of orderId 383 is transported from Chennai to Mangalore
+- package of orderId 846 is transported from Kolkata to Mangalore
+- package of orderId 146 is transported from Lucknow to Jabalpur
+- package of orderId 165 is transported from Mangalore to Bangalore
+- package of orderId 143 is transported from Indore to Lucknow
+- package of orderId 475 is transported from Mumbai to Lucknow
+- package of orderId 814 is transported from Mumbai to Delhi
+- package of orderId 81 is transported from Chennai to Mangalore
+- package of orderId 798 is transported from Bangalore to Chennai
+- package of orderId 950 is transported from Kolkata to Mangalore
+- package of orderId 973 is transported from Delhi to Indore
+- package of orderId 261 is transported from Delhi to Mumbai
+- package of orderId 493 is transported from Indore to Kolkata
+- package of orderId 428 is transported from Indore to Chennai
+- package of orderId 76 is transported from Delhi to Mumbai
+- package of orderId 25 is transported from Chennai to Mumbai
+- package of orderId 888 is transported from Lucknow to Mumbai
+- package of orderId 148 is transported from Mumbai to Mangalore
+- package of orderId 240 is transported from Bangalore to Chennai
+- package of orderId 898 is transported from Kolkata to Mumbai
+- package of orderId 209 is transported from Kolkata to Mangalore
+- package of orderId 755 is transported from Chennai to Jabalpur
+- package of orderId 14 is transported from Mangalore to Lucknow
+- package of orderId 971 is transported from Bangalore to Indore
+- package of orderId 23 is transported from Lucknow to Delhi
+- package of orderId 84 is transported from Mangalore to Bangalore
+- package of orderId 191 is transported from Mangalore to Bangalore
+- package of orderId 896 is transported from Chennai to Mumbai
+- package of orderId 81 is transported from Delhi to Indore
+- package of orderId 381 is transported from Mangalore to Jabalpur
+- package of orderId 389 is transported from Bangalore to Delhi
+- package of orderId 450 is transported from Jabalpur to Mangalore
+- package of orderId 99 is transported from Lucknow to Indore
+- package of orderId 526 is transported from Mumbai to Bangalore
 ====================================================================================================
