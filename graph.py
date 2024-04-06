@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Data
+# Data goes here
 transactions_per_block = [10, 100, 1000, 10000]  # Number of transactions per block
 time_in_seconds = [0.00015, 0.00036, 0.00369, 0.02298]  # Corresponding time in seconds
 
@@ -19,6 +19,6 @@ plt.title('Comparison of Average Time based on Transactions per Block')
 # Setting x-axis labels
 plt.xticks(range(len(transactions_per_block)), transactions_per_block)
 
-# Display the plot without gaps between bars
+# Displaying the plot without gaps between bars
 plt.tight_layout()
 plt.show()

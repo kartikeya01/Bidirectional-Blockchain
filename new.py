@@ -146,7 +146,7 @@ class Blockchain:
             print("Forward Hash:", block.forward_hash)
             print("Transactions:", block.transactions)
             print("=" * 50)
-    # ye ab naya function hai
+
     def update_forward_hashes(self):
         last_block_index = len(self.chain) - 1
         if last_block_index > 0:
@@ -179,15 +179,6 @@ for i in range(0, len(transactions), transactions_per_block):
     end_time = time.time()
     mining_times.append(end_time - start_time)
 
-# import matplotlib.pyplot as plt
-
-# plt.figure(figsize=(8, 6))
-# plt.plot(mining_times, marker='o', linestyle='-', color='b')
-# plt.xlabel('Block Number')
-# plt.ylabel('Mining Time (seconds)')
-# plt.title('Block Time for Mining of Each Block for ' + str(transactions_per_block) + ' transactions per block')
-# plt.grid(True)
-# plt.show()
 
 average_mining_time = sum(mining_times) / len(mining_times)
 print("Number of Transactions per block: " + str(transactions_per_block))

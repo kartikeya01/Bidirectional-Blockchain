@@ -46,7 +46,6 @@ class Block:
 class Blockchain:
     def __init__(self):
         self.chain = []
-        # Create a folder named "blockchain"
         self.blockchain_folder = "blockchain"
         os.makedirs(self.blockchain_folder, exist_ok=True)
 
@@ -54,7 +53,7 @@ class Blockchain:
         genesis_block = Block(transactions=[], previous_hash='0', random_number=0)
         self.chain.append(genesis_block)
 
-        # Save the genesis block data to a file in the blockchain folder
+        # Saving the genesis block data to a file in the blockchain folder
         genesis_block_filename = os.path.join(self.blockchain_folder, "Block_0.txt")
         with open(genesis_block_filename, 'w') as file:
             file.write("Block Hash: " + genesis_block.compute_block_hash() + "\n")
@@ -66,19 +65,19 @@ class Blockchain:
             file.write("=" * 50)
 
     def add_block(self, transactions):
-        # Get the previous block's hash
+        # previous block's hash
         previous_block_hash = self.chain[-1].compute_block_hash()
 
-        # Generate a random number for the new block
+        # Generating a random number for the new block
         random_number = random.randint(1, 10**9)
 
-        # Create a new block
+        # Creating a new block
         new_block = Block(transactions=transactions, previous_hash=previous_block_hash, random_number=random_number)
 
-        # Add the new block to the chain
+        # Adding the new block to the chain
         self.chain.append(new_block)
 
-        # Save the block data to a file in the blockchain folder
+        # Saving the block data to a file in the blockchain folder
         block_filename = os.path.join(self.blockchain_folder, f"Block_{len(self.chain) - 1}.txt")
         with open(block_filename, 'w') as file:
             file.write("Block Hash: " + new_block.compute_block_hash() + "\n")
@@ -130,23 +129,18 @@ class Blockchain:
             print("Transactions:", block.transactions)
             print("=" * 50)
 
-# Read transactions from the text file
+
 with open("sample.txt", "r") as file:
     transactions = file.read().splitlines()
 
-# Create a blockchain and add blocks with transactions
+# Created a blockchain 
 blockchain = Blockchain()
-
-# Define the number of transactions per block
 transactions_per_block = 10
 
-# Loop through transactions and create blocks
 for i in range(0, len(transactions), transactions_per_block):
     block_transactions = transactions[i:i+transactions_per_block]
     blockchain.add_block(block_transactions)
 
-# Traverse and print the blockchain using forward hashing
+# Traversing and printing
 blockchain.traverse_forward()
-
-# Traverse and print the blockchain in reverse order using backward hashing
 blockchain.traverse_backward()

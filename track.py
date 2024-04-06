@@ -5,16 +5,15 @@ import matplotlib.pyplot as plt
 def search_order_id_in_files(folder_path, order_id):
     occurrences = []
 
-    # Get a list of files in the specified folder
     file_list = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
 
-    # Iterate over files in the order they are stored in the folder
+    # Iterating over files 
     file_list.sort(key=lambda x: int(x.split('_')[1].split('.')[0]))
     start_time = time.time()
     for filename in file_list:
         file_path = os.path.join(folder_path, filename)
         
-        # Open the file and search for occurrences
+        # Opening the file and searching for occurrences
         with open(file_path, 'r') as file:
             lines = file.readlines()
             for line_number, line in enumerate(lines, start=1):
@@ -53,11 +52,11 @@ def plot():
     # Setting x-axis labels
     plt.xticks(range(len(transactions_per_block)), transactions_per_block)
 
-    # Display the plot without gaps between bars
+    # Displaying the plot without gaps between bars
     plt.tight_layout()
     plt.show()
 
-# Example usage:
+#usage
 folder_path = 'blockchain3'
 order_id_to_search = 55
 
@@ -70,6 +69,6 @@ if result:
     for occurrence in result:
         print(f"{occurrence['file']} - Line {occurrence['line_number']}: {occurrence['line']}")
     print(f"Time taken : {t_elapsed:.6f}")
-    plot()
+    # plot()
 else:
     print(f"No occurrences found for orderId {order_id_to_search}.")

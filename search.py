@@ -96,14 +96,14 @@ def search_order_id_from_both_ends(folder_path, order_id):
     return first_pointer
 
 def plot():
-    transactions_per_block = [10,50,100]  # Number of transactions per block
-    
-    time_in_seconds_uni = [0.078532,0.017338, 0.022078]
-    time_in_seconds_bi = [0.004601,0.001838,0.001420]
-    # time_in_seconds_bi = [0.011166,0.002292,0.003809,0.002563,0.003174]
+    transactions_per_block = [10, 50, 100]  # Number of transactions per block
+
+    time_in_seconds_uni = [0.078532, 0.017338, 0.022078]
+    time_in_seconds_bi = [0.038734, 0.007123, 0.010934]
+
     # Creating the bar chart
-    barUni = plt.bar(range(len(transactions_per_block)), time_in_seconds_uni, color='skyblue')
-    barBi = plt.bar(range(len(transactions_per_block)), time_in_seconds_bi, color='red')
+    barUni = plt.bar(range(len(transactions_per_block)), time_in_seconds_uni, color='skyblue', label='Unidirectional')
+    barBi = plt.bar(range(len(transactions_per_block)), time_in_seconds_bi, color='red', label='Bidirectional')
 
     # Adding time labels on bars
     for i, bar in enumerate(barUni):
@@ -115,10 +115,13 @@ def plot():
     # Adding labels and title
     plt.xlabel('Number of Transactions per Block')
     plt.ylabel('Time in Seconds')
-    plt.title('Comparison of Average Time based on Transactions per Block')
+    plt.title('Comparison of Average Time based on Transactions per Block while search')
 
     # Setting x-axis labels
     plt.xticks(range(len(transactions_per_block)), transactions_per_block)
+
+    # Adding legend
+    plt.legend()
 
     # Display the plot without gaps between bars
     plt.tight_layout()
@@ -134,7 +137,7 @@ if result_unidirectional:
     file_path, position, line = result_unidirectional
     print(f"Unidirectional Search - OrderID {order_id_to_search} found in file: {file_path}, at position: {position}")
     print(f"Line content: {line}")
-    plot()
+
     
 else:
     print(f"Unidirectional Search - OrderID {order_id_to_search} not found in any files.")
@@ -153,3 +156,4 @@ else:
 print(f"Bidirectional Search Time: {time_bidirectional:.6f} seconds")
 
 
+plot()
